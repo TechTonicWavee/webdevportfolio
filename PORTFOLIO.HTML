@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="STYLE.CSS  ">
+    <style>
+        .header{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: 20px;
+              margin-right: 800px;
+        }
+        #cell{
+            margin-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="cointain"> 
+            <nav class="header">
+             <ul>
+                <li id="cell"><a href="#home">Home</a></li>
+                <li id="cell"><a href="#about"> About</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+             </ul>    
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi,I'm <span>Priyanshu</span><br>Raj From India</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about .jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>Hello! My name is Priyanshu Raj, and I am a passionate web developer and sustainability enthusiast. I enjoy creating efficient, user-friendly web applications and working on projects that make a positive impact on the environment.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Machine Learning</span><br>Currently working on BMI</li>
+                            <li><span>Web Development</span><br>web development</li>
+                            <li><span>C++(DSA)</span><br>Doing problems on leetcode</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents"  id="projects">
+                        <ul>
+                            <li><span>Poly Regen</span><br>Poly Regen is designed to facilitate the collection of plastic waste from users while promoting the sale of recycled products.</li>
+                            <li><span>RentAll</span><br>RENTALL connects users who want to rent items with those offering them.</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024-current</span><br>KIET group of institution</li>
+                            <li><span>2021-2023</span><br>Works as Student</li>
+                            <li><span>2019-2020</span><br>Was Enjoying Life</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+    
+     <div id="contacts">
+        <div class="container">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>priyanshu.2428cse771@kiet.edu</p>
+                <p>+91-9998787855</p>
+               
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2"> Submit</button>
+                </form>
+            </div>
+        </div>
+    </div> 
+    <div class="copyright">
+        <p>Copyright @ Priyanshu, Made with by Easy Tutorial</p>
+    </div>
+    
+<script>
+
+var tablinks = document.getElementsByClassName("active-link");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink  of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+}
+event.currentTarget.classList.add("active-link");
+document.getElementById(tabname).classList.add("active-tab");
+
+}
+
+
+
+
+
+
+
+
+
+    
+</script>
+</body>
+</html>
